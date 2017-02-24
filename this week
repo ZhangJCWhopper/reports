@@ -1,0 +1,5 @@
+What they do:
+	First, talk about the cluster on MFCC features, this method goes like clustering of the MFCC vectors using K-means method, and then use the cluster core to make the KNN graph (link the k-nearest neighbours) and then use the maximum common subgraph (MCS), matching and align the testing speech graph to the enrolled ones and then get the matching score(counting percentage: MCS/original graph). The dataset is NIST SRE1999, the least EER is 13.8%, achieved when the graph has 64 vertices. Model size larger than 128 was not tested as the computational cost is unachievable.  
+	My comment: An important point of this kind of method is, the MCS ensures that the method to get the matching score is robust to rotation, which is common in text-independent situation. But using this is far less than enough, as roatation is just one of the problems brought by text-independent situation. In addition, the matching method would consume great amount of time and resource. From this I can learn that directly make clusters, graphes on the spectral field(MFCC) seems not to be a good idea.
+	Then, talk about another kind of method.
+  
